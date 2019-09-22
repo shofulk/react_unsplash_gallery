@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Gallery from './container/Gallery/Gallery';
+import {Switch, Route, Redirect, withRouter} from 'react-router-dom';
+import ImgPage from './container/ImgPage/ImgPage';
+import {connect} from 'react-redux';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  render(){
+    let router = (
+      <Switch>
+        <Route path="/img/:id" component={ImgPage}/>
+        <Route path="/" exact component={Gallery}/>
+        <Redirect to="/"/>
+      </Switch>
+    );
+    return (
+      <React.Fragment>
+
+        {router}
+      </React.Fragment>
+    );
+  }
 }
 
-export default App;
+function mapStateToProps(state){
+  return {}
+}
+
+function mapDispatchToProps(dispatch){
+  return {}
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

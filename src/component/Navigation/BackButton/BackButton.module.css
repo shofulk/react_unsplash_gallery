@@ -1,0 +1,11 @@
+.BackButton{
+    color: grey;
+    font-size: 30px;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+
+.BackButton:hover{
+    color: rgb(82, 82, 82);
+}

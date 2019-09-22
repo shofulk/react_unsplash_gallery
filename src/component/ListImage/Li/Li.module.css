@@ -1,0 +1,39 @@
+.Li{
+    list-style-type: none;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    margin: 3px 15px 3px 15px;
+    transition: border .3s linear;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+.NavLink{
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+}
+
+.Li .Description{
+    margin-left: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Li:hover{
+    border-bottom: 1px solid rgb(121, 121, 121);
+    text-decoration: underline;
+}
+
+span{
+    line-height: 40px;
+}
+
+.UserName{
+    font-size: 12px;
+    margin-left: 10px;
+    color: grey;
+    line-height: 10px !important;  
+}
